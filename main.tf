@@ -23,6 +23,12 @@ resource "google_container_cluster" "cluster-1" {
     }
   }
 
+  addons_config {
+    istio_config {
+      disabled = false
+    }
+  }
+  
   timeouts {
     create = "30m"
     update = "40m"
