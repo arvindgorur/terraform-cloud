@@ -28,12 +28,6 @@ resource "google_container_cluster" "cluster-1" {
     update = "40m"
   }
 
-  addons_config {
-    istio_config {
-      disabled = false
-    }
-  }
-
   release_channel {
     channel = "REGULAR"
   }
