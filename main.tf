@@ -11,6 +11,7 @@ provider "google-beta" {
 }
 
 resource "google_container_cluster" "cluster-1" {
+  provider = google-beta
   project = var.project_id
   name     = var.cluster_name
   location = var.zone
@@ -28,7 +29,7 @@ resource "google_container_cluster" "cluster-1" {
       disabled = false
     }
   }
-  
+
   timeouts {
     create = "30m"
     update = "40m"
