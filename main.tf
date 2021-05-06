@@ -11,7 +11,6 @@ provider "google-beta" {
 }
 
 resource "google_container_cluster" "cluster-1" {
-  provider = google-beta
   project = var.project_id
   name     = var.cluster_name
   location = var.zone
